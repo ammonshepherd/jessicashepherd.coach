@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jessica Shepherd - Life Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#"><img id="nav-logo" src="/public/images/logo2.png" /></a>
+        <div class="topnav" id="menu-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <a id="make-appointment-link" href="#">Make Appointment</a>
+          <a href="javascript:void(0);" class="icon" onclick="nav()">
+            <i class="fa fa-bars"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="banner">
+        <div id="banner-text">
+          <p id="sig">Jessica Shepherd</p>
+          <p id="tagline">Coaching</p>
+        </div>
+        <div id="banner-image">
+          <img src="/public/images/jess.png" />
+        </div>
+      </section>
+
+      <section id="call">
+        <h1>Ready to live with peace in the eye of the storm?</h1>
+        <a id="action">Learn More Here</a>
+      </section>
+
+      <section id="services">
+        <p id="services-intro">
+          Welcome to life coaching with Jessica! I am a trained and certified
+          life coach. I can help you learn the tools to change your life. I'm a
+          fitness fanatic, but you don't have to be in order to take control of
+          your health. I love to organize, declutter and sort. I can help you
+          get your physical life in order. Scroll down to find free resources to
+          get started with a healthier you!
+        </p>
+        <div id="service-boxes">
+          <div id="coaching" class="service-box">
+            <img src="/public/images/angelo-pantazis-2Tb_tNyXwxo-unsplash.jpg" alt="person sitting in nature pondering life" />
+            <h2 class="service-header coaching">
+              Your thoughts are your power
+            </h2>
+            <p>
+              Your greatest power is your thoughts. Whether you think you can or
+              you think you can't, you're right! Unlock the power of thoughts
+              with simple tools that will give you control over your life.
+            </p>
+            <a class="service-link" href="#">Control Your Thoughts</a>
+          </div>
+
+          <div id="training" class="service-box">
+            <img src="/public/images/dara-UsXLfRyXvzU-unsplash.jpg" alt="young woman exercising in the grass">
+            <h2 class="service-header training">Healthy body healthy mind</h2>
+            <p>
+              When your body is healthy and feeling great, then you can think
+              better and do more. I can help you with an exercise and training
+              program tailored to your desired lifestyle and current life
+              schedule. You will learn to strengthen your body and mind to make
+              a better you.
+            </p>
+            <a class="service-link" href="#">Train Your Body</a>
+          </div>
+
+          <div id="declutter" class="service-box">
+            <img src="/public/images/dara-UsXLfRyXvzU-unsplash.jpg" alt="young woman exercising in the grass">
+            <h2 class="service-header declutter">
+              Cleanliness is next to Godliness
+            </h2>
+            <p>
+              When your surroundings are cluttered, it's hard to do anything;
+              exercise is hard, thinking is hard, motivation is hard. Sometimes
+              you need an objective observer to help you kick your junk to the
+              curb. I'm ADHD with OC tendencies, which means I'll be hyper
+              focused on organizing and decluttering your living environment.
+            </p>
+            <a id="action" class="service-link" href="#">Control Your Home</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="posts"></section>
+    </main>
+
+    <footer>
+      <div id="footer-section">
+        <span>Copyright &copy; <span id="year"></span> Jessica Shepherd</span>
+        &because; <span>All rights reserved</span> &because;
+        <span><a href="#">Privacy Policy</a></span> &because;
+        <span><a href="#">Terms and Conditions</a></span>
+      </div>
+    </footer>
+    <script src="/public/js/nav.js"></script>
+    <script>
+      const d = new Date()
+      let year = d.getFullYear()
+      document.getElementById("year").textContent = year
+    </script>
+  </body>
+</html>
