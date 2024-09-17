@@ -130,10 +130,12 @@ nav {
 
 #call {
   background-color: #f8f6f5;
+  background-image: url("/public/images/topography.png");
   text-align: center;
   height: 24vh;
   padding: 20px;
 }
+
 #action {
   background-color: coral;
   display: inline-block;
