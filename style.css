@@ -214,6 +214,32 @@ hr::after {
 }
 
 /************************************
+ about styles 
+************************************/
+#about, #contact, #posts, #blog-post {
+  width: 90%;
+  margin: auto;
+  padding-top: 40px;
+  margin-bottom: 40px
+}
+#about p, #blog-post p {
+  margin-bottom: 14px;
+}
+#about .service-link {
+  max-width: 250px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+
+/************************************
+ posts page styles 
+************************************/
+
+#posts, #contact {
+  min-height: 40vh;
+}
+/************************************
  footer styles 
 ************************************/
 footer {
@@ -264,7 +290,7 @@ footer {
 @media screen and (min-width: 820px) {
   /*** services section ***/
   #services-intro {
-    width: 70%;
+    width: 750px;
     margin: 40px auto;
     font-size: 1.5rem;
   }
@@ -283,5 +309,9 @@ footer {
   }
   .service-box img {
     width: 100%;
+  }
+
+  #about, #contact, #posts {
+    max-width: 750px;
   }
 }

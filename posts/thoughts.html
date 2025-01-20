@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jessica Shepherd - Life Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#"><img id="nav-logo" src="/public/images/logo2.png" /></a>
+        <div class="topnav" id="menu-items">
+          <a href="/">Home</a>
+          <a href="/#about">About</a>
+          <a href="/#service-boxes">Services</a>
+          <a href="/#posts">Blog</a>
+          <a href="/#contact">Contact</a>
+          <a id="make-appointment-link" href="#">Make Appointment</a>
+          <a href="javascript:void(0);" class="icon" onclick="nav()">
+            <i class="fa fa-bars"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="banner">
+        <div id="banner-text">
+          <p id="sig">Jessica Shepherd</p>
+          <p id="tagline">Coaching</p>
+        </div>
+        <div id="banner-image">
+          <img src="/public/images/jess.png" />
+        </div>
+      </section>
+
+      <section id="blog-post">
+        <h1>It's just your thoughts!</h1>
+        <p>
+          Your thoughts create your life! You and I can have the exact same
+          circumstances, but we can think different thoughts about those
+          circumstances. And those different thoughts lead to different
+          feelings, actions, and results. So anything that’s “wrong” in your
+          life right now, is all because of the thoughts you are thinking. This
+          is SUCH good news! We can change our thoughts! Therefore, we can
+          change our results and feelings. How fantastic is that?
+        </p>
+        <p>
+          You’ve probably heard some version of the Serenity Prayer, “God, grant
+          me the serenity to accept the things I cannot change, courage to
+          change the things I can, and wisdom to know the difference.”
+        </p>
+        <p>
+          Here’s the wisdom to know the difference (seriously, here’s the
+          secret): Our circumstances are the things outside of our control,
+          these are the things we cannot change. Our circumstances include other
+          people (our kids, our partners, our family members, our religious or
+          political leaders, our neighbors). Outside of our control are their
+          thoughts, words, and actions. Other circumstances include
+          nature–weather, natural disasters, animals, and our genetics. That’s
+          about it. We can influence others, but we cannot change others. What
+          we can change is ourselves. That’s it. We can change our thinking,
+          which changes our feelings and actions and how we show up in the
+          world. All this leads to our results. We create our results. No one
+          else does. SUCH GOOD NEWS!!
+        </p>
+        <p>
+          Our New Serenity Prayer goes like this instead, “God, grant me the
+          serenity to accept that others can and will do what they want to do,
+          courage to change myself, and the wisdom of awareness.”
+        </p>
+        <p>
+          “God, grant me the wisdom to know how to change myself, since I can’t
+          change anything else.”
+        </p>
+      </section>
+      <section id="contact">
+        <p>Send me an email to get started on your journey.</p>
+        <p>
+          Email:
+          <a href="mailto:me@jessicashepherd.coach">me@jessicashepherd.coach</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer-section">
+        <span>Copyright &copy; <span id="year"></span> Jessica Shepherd</span>
+        &because; <span>All rights reserved</span> &because;
+        <span><a href="#">Privacy Policy</a></span> &because;
+        <span><a href="#">Terms and Conditions</a></span>
+      </div>
+    </footer>
+    <script src="/public/js/nav.js"></script>
+    <script>
+      const d = new Date()
+      let year = d.getFullYear()
+      document.getElementById("year").textContent = year
+    </script>
+  </body>
+</html>
