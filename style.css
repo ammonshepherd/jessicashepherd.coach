@@ -111,6 +111,7 @@ nav {
 #banner-text {
   margin-left: 30px;
   color: #565454;
+  text-align: center;
 }
 #banner-text #sig {
   font-family: "Great Vibes", cursive;
@@ -124,15 +125,14 @@ nav {
   font-size: 3vw;
 }
 #banner-image img {
-  width: 30vw;
-  min-width: 300px;
+  width: 10vw;
+  min-width: 200px;
 }
 
 #call {
   background-color: #f8f6f5;
   background-image: url("/public/images/topography.png");
   text-align: center;
-  height: 24vh;
   padding: 20px;
 }
 
@@ -149,6 +149,8 @@ nav {
 }
 #action:hover {
   color: rgb(255, 200, 181);
+  background-color: rgb(222, 86, 36);
+  cursor:pointer;
 }
 
 hr {
@@ -173,10 +175,13 @@ hr::after {
 /**********************************
     services section
 **********************************/
+#services {
+  margin-top: 10px;
+}
 #services-intro {
   width: 70%;
   margin: 40px auto;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 #service-boxes {
   display: flex;
@@ -250,6 +255,7 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  padding: 8px;
 }
 #footer-section {
   text-align: center;
@@ -286,6 +292,13 @@ footer {
     display: block;
     text-align: left;
   }
+
+  #banner-text #tagline {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2vw;
+    margin-top: 0px;
+  }
 }
 @media screen and (min-width: 820px) {
   /*** services section ***/
@@ -313,5 +326,22 @@ footer {
 
   #about, #contact, #posts {
     max-width: 750px;
+  }
+
+  #banner-text #sig {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8vw;
+  }
+  #banner-text #tagline {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2vw;
+    margin-top: -20px;
+  }
+  #banner-image img {
+    width: 30vw;
+    min-width: 300px;
   }
 }
