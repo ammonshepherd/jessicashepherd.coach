@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico">
     <title>Jessica Shepherd - Life Coach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
@@ -24,12 +26,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
   </head>
-  <body>
-    <header>
+  <body>    <header id="header">
       <nav>
-        <a href="#"><img id="nav-logo" src="/public/images/logo2.png" /></a>
         <div class="topnav" id="menu-items">
           <a href="/">Home</a>
           <a href="/#about">About</a>
@@ -43,18 +43,7 @@
         </div>
       </nav>
     </header>
-
     <main>
-      <section id="banner">
-        <div id="banner-text">
-          <p id="sig">Jessica Shepherd</p>
-          <p id="tagline">Coaching</p>
-        </div>
-        <div id="banner-image">
-          <img src="/public/images/jess.png" />
-        </div>
-      </section>
-
       <section id="blog-post">
         <h1>It's just your thoughts!</h1>
         <p>
@@ -102,9 +91,7 @@
           <a href="mailto:me@jessicashepherd.coach">me@jessicashepherd.coach</a>
         </p>
       </section>
-    </main>
-
-    <footer>
+    </main>    <footer>
       <div id="footer-section">
         <span>Copyright &copy; <span id="year"></span> Jessica Shepherd</span>
         &because; <span>All rights reserved</span> &because;
@@ -117,6 +104,5 @@
       const d = new Date()
       let year = d.getFullYear()
       document.getElementById("year").textContent = year
-    </script>
-  </body>
+    </script>  </body>
 </html>
