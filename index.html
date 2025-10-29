@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico">
     <title>Jessica Shepherd - Life Coach</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=read_more" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=read_more" />
 
-    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/style.css">
   </head>
   <body>
-    <header id="header">
-      <nav>
-        <div class="topnav" id="menu-items">
-          <a href="/">Home</a>
-          <a href="/#about">About</a>
-          <a href="/#service-boxes">Services</a>
-          <a href="/#posts">Thoughts</a>
-          <a href="/#contact">Contact</a>
-          <a id="make-appointment-link" href="mailto:me@jessicashepherd.coach">Make Appointment</a>
-          <a href="javascript:void(0);" class="icon" onclick="nav()">
-            <i class="fa fa-bars"></i
-          ></a>
-        </div>
-      </nav>
-    </header>
+  <header id="header">
+    <nav aria-label="Main navigation">
+      <div class="topnav">
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+        <label for="menu-toggle" class="icon" aria-hidden="true">
+          ☰
+          <span class="sr-only">Menu</span>
+        </label>
 
-    <main>
-      <section id="banner">
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#service-boxes">Services</a>
+        <a href="#posts">Thoughts</a>
+        <a href="#contact">Contact</a>
+        <a id="make-appointment-link" href="#">Make Appointment</a>
+          
+      </div>
+    </nav>
+  </header>
+
+<main>
+      <div id="banner">
         <div id="banner-text">
-          <p id="sig">Jessica Shepherd</p>
-          <p id="tagline">Coaching</p>
+          <span id="sig">Jessica Shepherd</span>
+          <span id="tagline">Coaching</span>
         </div>
         <div id="banner-image">
-          <img src="/public/images/jess.png" />
+          <img alt="Jessica Shepherd" src="/public/images/jess.png">
         </div>
-      </section>
+      </div>
 
       <section id="call">
         <h1>Ready to live with peace in the eye of the storm?</h1>
-        <!-- <a id="action">Learn More Here</a> -->
       </section>
 
       <section id="services">
@@ -72,14 +62,11 @@
           physical life. Scroll down to find free resources to get started with
           a healthier you!
         </p>
-        <hr class="divider-bar" />
+        <hr class="divider-bar">
 
         <div id="service-boxes">
           <div id="coaching" class="service-box">
-            <img
-              src="/public/images/angelo-pantazis-2Tb_tNyXwxo-unsplash.jpg"
-              alt="person sitting in nature pondering life"
-            />
+            <img src="/public/images/angelo-pantazis-2Tb_tNyXwxo-unsplash.jpg" alt="person sitting in nature pondering life">
             <h2 class="service-header coaching">
               Your thoughts are your power
             </h2>
@@ -88,14 +75,11 @@
               you think you can't, you're right! Unlock the power of thoughts
               with simple tools that will give you control over your life.
             </p>
-            <a class="service-link" href="#">Control Your Thoughts</a>
+            <a class="service-link" href="/">Control Your Thoughts</a>
           </div>
 
           <div id="training" class="service-box">
-            <img
-              src="/public/images/dara-UsXLfRyXvzU-unsplash.jpg"
-              alt="young woman exercising in the grass"
-            />
+            <img src="/public/images/dara-UsXLfRyXvzU-unsplash.jpg" alt="young woman exercising in the grass">
             <h2 class="service-header training">Healthy body, healthy mind</h2>
             <p>
               When your body is healthy and feeling great, then you can think
@@ -104,14 +88,11 @@
               schedule. You will learn to strengthen your body and mind to make
               a better you.
             </p>
-            <a class="service-link" href="#">Control Your Body</a>
+            <a class="service-link" href="/">Control Your Body</a>
           </div>
 
           <div id="declutter" class="service-box">
-            <img
-              src="/public/images/eric-prouzet-oioOFrF6IRs-unsplash.jpg"
-              alt="a very messy room"
-            />
+            <img src="/public/images/eric-prouzet-oioOFrF6IRs-unsplash.jpg" alt="a very messy room">
             <h2 class="service-header declutter">
               Cleanliness is next to Godliness
             </h2>
@@ -122,12 +103,12 @@
               curb. I'm ADHD with OC tendencies, which means I'll be hyper
               focused on organizing and decluttering your living environment.
             </p>
-            <a class="service-link" href="#">Control Your Home</a>
+            <a class="service-link" href="/">Control Your Home</a>
           </div>
         </div>
       </section>
 
-      <hr class="divider-bar" />
+      <hr class="divider-bar">
 
       <section id="about">
         <h2>About me</h2>
@@ -176,18 +157,18 @@
           you along your health journey to the best version of you. Come with
           me! &#129505;
         </p>
-        <p><a class="service-link">Sign Up Now</a></p>
+        <p><a href="mailto:me@jessicashepherd.coach" class="service-link">Sign Up Now</a></p>
       </section>
 
-      <hr class="divider-bar" />
+      <hr class="divider-bar">
 
       <section id="posts">
         <h2>Thoughts Worth Having</h2>
         <div id="posts-list">
           <article class="thought-list-item">
-            <img class="thought-list-image" src="/public/images/thoughts.png">
+            <a href="/posts/thoughts.html"><img alt="a girl sitting and thinking" class="thought-list-image" src="/public/images/thoughts.png"></a>
             <div class="thought-list-text">
-              <h3><a href="/posts/thoughts.html">1. It's just your thoughts...</a></h3>
+              <h3>1. It's just your thoughts</h3>
               <p>Your thoughts create your life! You and I can have the exact same circumstances, but we can think different thoughts about those circumstances. And those different thoughts lead to different feelings, actions, and results.</p>
               <div class="read-more">
                 <a href="/posts/thoughts.html">
@@ -199,16 +180,16 @@
         </div>
       </section>
 
-      <hr class="divider-bar" />
+      <hr class="divider-bar">
 
-      <section id="contact">
+      <div id="contact">
         <p>Send me an email to get started on your journey.</p>
         <p>
           Email:
-          <a href="mailto:me@jessicashepherd.coach">me@jessicashepherd.coach</a>
+          <a class="link" href="mailto:me@jessicashepherd.coach">me@jessicashepherd.coach</a>
         </p>
-      </section>
-    </main>
+      </div>
+</main>
     <footer>
       <div id="footer-section">
         <span>Copyright &copy; <span id="year"></span> Jessica Shepherd</span>
@@ -217,7 +198,6 @@
         <span><a href="#">Terms and Conditions</a></span>
       </div>
     </footer>
-    <script src="/public/js/nav.js"></script>
     <script>
       const d = new Date()
       let year = d.getFullYear()

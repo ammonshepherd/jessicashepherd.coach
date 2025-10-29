@@ -1,3 +1,19 @@
+/* Color Palette */
+:root {
+  --bg-color: #ffffff;
+  --dark:  #00202e;  
+  --deep-blue: #003f5c;
+  --dark-purple: #2c4875;
+  --purple: #8a508f;
+  --pink: #bc5090;
+  --red: #ff6361;
+  --orange: #ff8531;
+  --yellow: #ffa600;
+  --pale: #ffd380;
+  --text: #606160;
+  --light: #f2f2f2;
+}
+
 /* 1. Use a more-intuitive box-sizing model.  */
 *,
 *::before,
@@ -13,10 +29,9 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  color: #606160;
+  color: var(--text);
 }
 /* 5. Improve media defaults */
 img,
@@ -52,20 +67,23 @@ h6 {
 
 /* 9. Remove link styles */
 a {
-  color:#606160;
+  color: var(--text);
   text-decoration: none;
 }
 
-.material-symbols-outlined {
-  vertical-align: middle;
-  margin: 8px;
+.link {
+  color: var(--purple);
 }
+.link:hover {
+  color: var(--dark-color);
+}
+
 /***************************************
       navigation bar
 ***************************************/
 nav {
   width: 100%;
-  background-color: #606160;
+  background-color: var(--light);
   height: 60px;
   display: flex;
   flex-flow: row wrap;
@@ -74,38 +92,81 @@ nav {
   font-family: Nunito, sans-serif;
   text-transform: uppercase;
 }
-#nav-logo {
-  max-height: 60px;
-}
 .topnav {
-  background-color: #606160;
+  background-color: var(--light);
   overflow: hidden;
+  position: relative;
 }
+
+/* Links */
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: var(--deep-blue);
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   text-decoration: none;
   font-size: 17px;
-  font-weight: bold;
+  transition: background-color 0.3s;
 }
+
+.topnav a:hover {
+  color: var(--purple); /* slightly darker for better contrast */
+}
+
+.topnav a.active {
+  background-color: var(--pink);
+}
+
+/* Screen-reader-only helper */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.icon {
+  display: none;
+  font-size: 22px;
+  color: var(--purple);
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    display: none;
+    float: none;
+    text-align: left;
+  }
+
+  .icon {
+    display: block;
+    float: right;
+  }
+
+  #menu-toggle:checked ~ a {
+    display: block;
+  }
+}
+
+
 #make-appointment-link {
-  background-color: coral;
+  color: var(--deep-blue);
+  background-color: var(--pale); 
 }
 #make-appointment-link:hover {
-  color: rgb(255, 200, 181);
-}
-.topnav a:hover {
-  color: #afafaf;
-}
-.topnav a.active {
-  background-color: #04aa6d;
-  color: white;
-}
-.topnav .icon {
-  display: none;
+  color: var(--purple);
 }
 
 /***************************************
@@ -120,16 +181,18 @@ nav {
 }
 #banner-text {
   margin-left: 30px;
-  color: #565454;
+  color: var(--text);
   text-align: center;
 }
-#banner-text #sig {
+#sig {
+  display: block;
   font-family: "Lavishly Yours", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 8vw;
 }
 #banner-text #tagline {
+  display: block;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3vw;
@@ -140,33 +203,33 @@ nav {
 }
 
 #call {
-  background-color: #f8f6f5;
+  background-color: var(--light);
   background-image: url("/public/images/topography.png");
   text-align: center;
   padding: 20px;
 }
 
 #action {
-  background-color: coral;
+  background-color: var(--purple);
   display: inline-block;
   width: 320px;
   margin-top: 20px;
   padding: 20px;
-  color: #f2f2f2;
+  color: var(--light);
   font-weight: 900;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
 #action:hover {
-  color: rgb(255, 200, 181);
-  background-color: rgb(222, 86, 36);
+  color: var(--light);
+  background-color: var(--purple);
   cursor:pointer;
 }
 
 hr {
   border: none;
-  border-top: 3px double coral;
-  color: coral;
+  border-top: 3px double var(--orange);
+  color: var(--orange);
   overflow: visible;
   text-align: center;
   height: 5px;
@@ -221,11 +284,15 @@ hr::after {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  background-color: coral;
+  background-color: var(--purple);
   width: 100%;
   padding: 20px;
-  color: #f2f2f2;
+  color: var(--light);
   font-weight: bolder;
+}
+.service-link:hover {
+  background-color: var(--pink);
+  color: var(--light);
 }
 
 /************************************
@@ -250,7 +317,17 @@ hr::after {
 /************************************
  posts page styles 
 ************************************/
-
+#md-wrap {
+  width: 80vw;
+  margin: auto;
+}
+#md-wrap h1 {
+  margin: 14px 0px;
+}
+#md-wrap p {
+  line-height: 1.4rem;
+  margin-bottom: 10px;
+}
 #posts, #contact {
   min-height: 40vh;
 }
@@ -275,31 +352,57 @@ hr::after {
   padding: 20px;
 }
 .thought-list-text h3 {
-  font-size: 1.5rem;
   margin: 8px 0px 12px 0px;
-}
-.thought-list-text h3 a {
-  text-decoration: none;
-  color:#565454;
+  color: var(--text);
   font-weight: 500;
 }
 .read-more {
   margin-top: 20px;
-  color: coral;
+  color: var(--purple);
   font-weight: 800;
 }
 .read-more a {
-  color: coral;
+  color: var(--purple);
+}
+.read-more span {
+  vertical-align: middle;
+  margin: 8px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 
+/************
+Thoughts pages
+*****************/
+#you-got-this {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--pink);
+  margin-top: 30px;
+}
+#jess-sig {
+  display: block;
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.4rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 
 /************************************
  footer styles 
 ************************************/
 footer {
-  background-color: #606160;
-  color: #f2f2f2;
+  background-color: var(--dark-purple);
+  color: var(--light);
   height: 20vh;
   display: flex;
   flex-flow: row wrap;
@@ -311,39 +414,16 @@ footer {
   text-align: center;
 }
 #footer-section a {
-  color: coral;
+  color: var(--light);
   text-decoration: none;
 }
 #footer-section a:hover {
-  color: rgb(255, 200, 181);
+  color: var(--pink);
 }
 
 /***************************************
     big screen specific styles
 ***************************************/
-@media screen and (max-width: 820px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
 @media screen and (min-width: 820px) {
   #header {
     width: 100%;
@@ -396,6 +476,7 @@ footer {
     align-items: stretch;
     gap: 30px;
     margin: 20px;
+    padding-top: 40px;
   }
   .service-box {
     box-sizing: border-box;
@@ -419,6 +500,7 @@ footer {
 
   /* List of thoughts on home page */
   #posts h2 {
+    margin-top: 20px;
     text-align: center;
   }
   #posts-list {
@@ -445,20 +527,20 @@ footer {
   }
   .thought-list-text h3 a {
     text-decoration: none;
-    color:#565454;
+    color: var(--text);
     font-weight: 500;
   }
   .read-more {
     margin-top: 20px;
-    color: coral;
+    color: var(--purple);
     font-weight: 800;
   }
   .read-more a {
-    color: coral;
+    color: var(--purple);
   }
 
 /* Blog Post page */
-  #post-image img {
+  #post-header-image {
     object-fit: contain;
     width: 50vw;
     margin: auto;
@@ -466,6 +548,12 @@ footer {
   #blog-post {
     margin-top: 120px;
     width: 50vw;
+  }
+
+  /* markdown wrapper */
+  #md-wrap {
+    margin: 80px auto;
+    max-width: 800px;
   }
 
 }
