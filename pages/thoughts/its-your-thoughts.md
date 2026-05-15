@@ -1,6 +1,11 @@
-![a girl thinking](/public/images/lorenzo-fustaino-PXRYY5fW3ZM-unsplash.webp){: #post-header-image}
+---
+title: "It's Just Your Thoughts"
+author: "Jessica Shepherd"
+date: 2026-05-13 20:09:33
+template: post
+---
 
-#It's just your thoughts!
+![a girl thinking]({{base_url}}/public/images/lorenzo-fustaino-PXRYY5fW3ZM-unsplash.webp){: #post-header-image}
 
 Your thoughts create your life! You and I can have the exact same circumstances, but we can think different thoughts about those circumstances. And those different thoughts lead to different feelings, actions, and results. So anything that’s “wrong” in your life right now, is all because of the thoughts you are thinking. This is SUCH good news! We can change our thoughts! Therefore, we can change our results and feelings. How fantastic is that?
 

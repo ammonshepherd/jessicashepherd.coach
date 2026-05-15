@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Jessica Shepherd - Posts{% endblock %}
+{% block content %}
+    <main id="post-main">
+        <section id="md-wrap">
+            <h1>{{title}}</h1>
+
+            {{ content }}
+            
+            <span>{{date | datetime("%A, %b %d, %Y") }}</span>
+        </section>
+    </main>
+
+    {% if prev_post_url or nex_post_url %}
+        <div class="post_nav">
+            <h3><a href="{{base_url}}/thoughts/">Thoughts</a></h3>
+            <nav>
+                {% if prev_post_url %}
+                    <p><a href="{{base_url}}/{{ prev_post_url }}">← {{ prev_post_title }}</a></p>
+                {% endif %}
+                
+                {% if next_post_url %}
+                    <p><a href="{{base_url}}/{{ next_post_url }}">{{ next_post_title }} →</a></p>
+                {% endif %}
+            </nav>
+        </div>
+    {% endif %}
+{% endblock %}
